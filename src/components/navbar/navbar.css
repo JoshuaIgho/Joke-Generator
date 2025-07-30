@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1E202A;
+  color: #f0f0f0;
+
+
+}
+
+.sidebar {
+  height: 100vh; /* full screen height */
+  width: 200px; /* or your preferred width */
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+   background: rgba(30, 32, 42, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.sidebar__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar__menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #ccc;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar__menu a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #8ab4f8;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    z-index: 1100;
+    cursor: pointer;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .toggle-btn {
+    display: none;
+  }
+
+  .sidebar {
+    transform: none !important;
+    position: static;
+  }
+}
