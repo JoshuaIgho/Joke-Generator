@@ -7,15 +7,17 @@ function MainContent() {
     const cardWrapper = document.getElementById("card-wrapper");
     const ball = document.querySelector(".ball");
 
-    toggleCheckbox?.addEventListener("change", function () {
-      if (this.checked) {
-        cardWrapper.style.transform = "rotateY(180deg)";
-        ball.style.transform = "translateX(50px) rotate(360deg)";
-      } else {
-        cardWrapper.style.transform = "rotateY(0deg)";
-        ball.style.transform = "translateX(0) rotate(0deg)";
-      }
-    });
+    if (toggleCheckbox && cardWrapper && ball) {
+      toggleCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+          cardWrapper.style.transform = "rotateY(180deg)";
+          ball.style.transform = "translateX(50px) rotate(360deg)";
+        } else {
+          cardWrapper.style.transform = "rotateY(0deg)";
+          ball.style.transform = "translateX(0) rotate(0deg)";
+        }
+      });
+    }
   }, []);
 
   return (
@@ -23,8 +25,8 @@ function MainContent() {
       <div className="row full-height justify-content-center center">
         <div className="try">
           <div className="section text-center ">
-            <h6 className="mb-0 pb-0 gap">
-              <span>Instructions</span>        <span>Get Joke</span>
+            <h6 className="mb-0 pb-0 gap info">
+              <span>Instructions</span><span>Get Joke</span>
             </h6>
 
             <div className="checkbox__container">
@@ -36,7 +38,10 @@ function MainContent() {
               </label>
             </div>
 
-            <div className="card-3d-wrap">
+            <div className="center-container">
+  <div className="card-3d-wrap">
+    <div className="card-3d-wrapper" id="card-wrapper">
+  <div className="card-3d-wrap">
               <div className="card-3d-wrapper" id="card-wrapper">
                 {/* Front Side */}
                 <div className="card-front">
@@ -74,7 +79,7 @@ function MainContent() {
                             By following these guidelines, you’ll ensure that
                             the joke generator works as expected.
                             <br /><br />
-                            <span class="toggle">
+                            <span className="toggle">
                               Click on the button to toggle to the joke
                               generator
                             </span>
@@ -146,6 +151,10 @@ function MainContent() {
                 </div>
               </div>
             </div>
+
+</div>
+  </div>
+</div>
           </div>
         </div>
       </div>

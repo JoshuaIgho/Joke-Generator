@@ -10,6 +10,46 @@
   box-sizing: border-box;
 }
 
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px; /* Full screen height */
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card-3d-wrap {
+  width: 400px; /* Adjust width as needed */
+  max-width: 100%;
+  perspective: 1000px;
+}
+
+.card-3d-wrapper {
+  width: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card-3d-wrap {
+  position: relative;
+  width: 440px; /* Or 400px - pick one */
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 60px;
+}
+
 
 
 .row,
@@ -45,16 +85,7 @@ h6 span, h4{
   font-weight: bold;
 }
 
-.card-3d-wrap {
-  position: relative;
-  width: 440px;
-  max-width: 100%;
-  height: 400px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  perspective: 800px;
-  margin-top: 60px;
-}
+
 
 /* the other side of toggle */
 .card-3d-wrapper {
@@ -120,7 +151,8 @@ h6 span, h4{
     border-radius: 30px;
     background: linear-gradient(45deg, hsl(39, 100%, 80%), hsl(300, 47%, 85%));
     box-shadow: 0px 1.9px 3.2px rgba(0, 0, 0, 0.25);
-    margin: 20px auto;
+    margin: 20px auto ;
+    
 }
 
 
@@ -215,9 +247,7 @@ button:hover{
     width: 100%; /* Full width */
     animation: scroll 50s linear infinite; /* Animation for scrolling */
 }
-.toggle{
-    color: green;
-}
+
 ul.nav a i {
     color: white;
   }
@@ -244,14 +274,57 @@ ul.nav a i {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) { 
-    body{
-        height: 100%;
+@media (min-width: 1024px) and (max-width: 1600px) {
+
+  .card-3d-wrap {
+    width: 600px; /* Adjust width for larger screens */
+  }
+
+  .card-3d-wrapper {
+    width: 100%;
+    height: 450px; /* Adjust height for larger screens */
+  }
+
+  .center-wrap {
+    padding: 70px; /* Adjust padding for larger screens */
+  }
+  .center-container {
+    width: 100%;
+    margin-left: -60px;
+  }
+  .checkbox__container {
+    margin: 0px 290px ;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  .info{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+  }
+}
+
+
+/* toggle not moving smothing, check here */
+@media (max-width: 768px) {
+  .checkbox__container {
+    margin-bottom: -35px;
+  }
+    .center-wrap {
+        width: 100%; /* Full width for smaller screens */
     }
-    .card-3d-wrap {
-       width: 100%;
-    }
-    .instructions {
-        animation: scroll 15s linear infinite; /* Speed up scrolling for mobile */
+
+  .info span {
+  white-space: nowrap; /* Prevents text from breaking mid-word */
+  flex-shrink: 1; /* Allows some shrink, but not too much */
+}
+    
+   
+}
+@media (max-width: 400px) {
+  /* Galaxy S8+ and smaller phones */
+  .center-wrap{
+      width: 100%; /* Full width for smaller screens */
+      padding: 15px;
     }
 }

@@ -80,7 +80,7 @@ body {
 }
 
 /* Desktop Styles */
-@media (min-width: 769px) {
+@media (max-width: 769px) {
   .toggle-btn {
     display: none;
   }
@@ -88,5 +88,31 @@ body {
   .sidebar {
     transform: none !important;
     position: static;
+  }
+}
+@media (max-width: 1024px){
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    z-index: 1100;
+    cursor: pointer;
   }
 }
