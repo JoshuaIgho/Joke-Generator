@@ -1,53 +1,84 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
+import ShinyText from "../ShinyText/ShinyText.jsx";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   };
 
   return (
     <>
-      {/* Toggle Button (Only shows on mobile) */}
-      <button className="toggle-btn" onClick={toggleSidebar}>
-        ☰
+      {/* Toggle Button */}
+      <button 
+        className={`toggle-btn ${isOpen ? 'open' : ''}`} 
+        onClick={toggleSidebar}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? '✕' : '☰'}
       </button>
 
+      {/* Full Page Overlay */}
+      {isOpen && (
+        <div 
+          className="overlay"
+          onClick={toggleSidebar}
+        />
+      )}
+
+      {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <ul className="sidebar__menu">
           <li>
-            <a href="#">
-              <i data-feather="home"></i>
-              <span>Home</span>
-            </a>
+            <Link to="/" onClick={toggleSidebar}>
+              <span className="spanning"><ShinyText
+                                  text="
+Home
+"
+                                  disabled={false}
+                                  speed={3}
+                                  className="custom-class"
+                                /></span>
+              
+            </Link>
+          </li>
+          <li>
+            <Link to="/jokes" onClick={toggleSidebar}>
+              <span className="spanning"><ShinyText
+                                  text="
+Jokes
+"
+                                  disabled={false}
+                                  speed={3}
+                                  className="custom-class"
+                                /></span>
+            </Link>
           </li>
           <li>
             <a href="#">
-              <i data-feather="user"></i>
-              <span>Profile</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i data-feather="message-circle"></i>
-              <span>Messages</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i data-feather="settings"></i>
-              <span>Settings</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i data-feather="help-circle"></i>
-              <span>Help</span>
+              <span className="spanning"><ShinyText
+                                  text="
+About
+"
+                                  disabled={false}
+                                  speed={3}
+                                  className="custom-class"
+                                /></span>
             </a>
           </li>
         </ul>
+
+        <div className="social-icons-container">
+          <ul className="social-icons">
+            <li><a className="social-icon" href="#"><i className="fab fa-github"></i></a></li>
+            <li><a className="social-icon" href="#"><i className="fab fa-instagram"></i></a></li>
+            <li><a className="social-icon" href="#"><i className="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
       </div>
     </>
   );
