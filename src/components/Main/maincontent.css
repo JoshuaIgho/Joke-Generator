@@ -255,6 +255,23 @@ ul.nav a i {
     background: transparent;
   }
  
+.get-jokes{
+  font-weight: 800;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .form-group select {
+    padding: 18px 24  px !important; /* Even larger on mobile */
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .amount-input {
+    padding: 7px!important; /* Even larger on mobile */
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
 @keyframes scroll {
     0% {
         transform: translateY(0); /* Start position */
@@ -315,8 +332,11 @@ ul.nav a i {
   /* Galaxy S8+ and smaller phones */
   .center-wrap{
       width: 100%; /* Full width for smaller screens */
-      padding: 15px;
+      padding: 20px;
       height: 100%; /* Full height for smaller screens */
    
+    }
+    .info{
+      margin-left: 12px;
     }
 }

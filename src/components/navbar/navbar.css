@@ -210,3 +210,24 @@
     margin-left: 250px;
   }
 }
+/* Mobile Social Icons Adjustment */
+@media (max-width: 1024px) {
+  .social-icons-container {
+    padding: 20px;
+    margin-top: 0; /* Remove auto margin */
+    margin-bottom: 2rem; /* Add space at bottom */
+  }
+  
+  .sidebar {
+    justify-content: flex-start; /* Align items to top */
+    padding-bottom: 20px; /* Add padding at bottom */
+  }
+}
+
+/* Keep desktop styles unchanged */
+@media (min-width: 1025px) {
+  .social-icons-container {
+    padding: 30px 20px; /* Original desktop padding */
+    margin-top: auto; /* Push to bottom on desktop */
+  }
+}

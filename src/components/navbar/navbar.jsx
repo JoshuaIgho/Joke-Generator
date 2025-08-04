@@ -74,9 +74,9 @@ About
 
         <div className="social-icons-container">
           <ul className="social-icons">
-            <li><a className="social-icon" href="#"><i className="fab fa-github"></i></a></li>
-            <li><a className="social-icon" href="#"><i className="fab fa-instagram"></i></a></li>
-            <li><a className="social-icon" href="#"><i className="fab fa-facebook"></i></a></li>
+            <li><a className="social-icon" href="https://github.com/JoshuaIgho"><i className="fab fa-github"></i></a></li>
+            <li><a className="social-icon" href="https://www.instagram.com/warrii___/"><i className="fab fa-instagram"></i></a></li>
+            <li><a className="social-icon" href="https://codepen.io/Joshua-Alex"><i class="fa-brands fa-codepen"></i></a></li>
           </ul>
         </div>
       </div>

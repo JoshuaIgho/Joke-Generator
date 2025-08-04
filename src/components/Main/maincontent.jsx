@@ -167,7 +167,7 @@ function MainContent({ onGetJokes }) {
                                 </div>
 
                                 <div className="form-group mt-2">
-                                  <input
+                                  <input className="amount-input"
                                     type="number"
                                     id="amount"
                                     name="amount"
@@ -191,7 +191,7 @@ function MainContent({ onGetJokes }) {
                                 <button
                                   type="button"
                                   onClick={handleSubmit}
-                                  className="p-2  rounded-3"
+                                  className="p-2  rounded-3 get-jokes" 
                                 >
                                   {" "}
                                   <ShinyText
