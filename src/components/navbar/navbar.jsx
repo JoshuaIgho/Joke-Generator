@@ -35,40 +35,39 @@ function Navbar() {
         <ul className="sidebar__menu">
           <li>
             <Link to="/" onClick={toggleSidebar}>
-              <span className="spanning"><ShinyText
-                                  text="
-Home
-"
-                                  disabled={false}
-                                  speed={3}
-                                  className="custom-class"
-                                /></span>
-              
+              <span className="spanning">
+                <ShinyText
+                  text="Home"
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </span>
             </Link>
           </li>
           <li>
             <Link to="/jokes" onClick={toggleSidebar}>
-              <span className="spanning"><ShinyText
-                                  text="
-Jokes
-"
-                                  disabled={false}
-                                  speed={3}
-                                  className="custom-class"
-                                /></span>
+              <span className="spanning">
+                <ShinyText
+                  text="Jokes"
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </span>
             </Link>
           </li>
           <li>
-            <a href="#">
-              <span className="spanning"><ShinyText
-                                  text="
-About
-"
-                                  disabled={false}
-                                  speed={3}
-                                  className="custom-class"
-                                /></span>
-            </a>
+            <Link to="/about" onClick={toggleSidebar}>
+              <span className="spanning">
+                <ShinyText
+                  text="About"
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </span>
+            </Link>
           </li>
         </ul>
 
@@ -76,7 +75,7 @@ About
           <ul className="social-icons">
             <li><a className="social-icon" href="https://github.com/JoshuaIgho"><i className="fab fa-github"></i></a></li>
             <li><a className="social-icon" href="https://www.instagram.com/warrii___/"><i className="fab fa-instagram"></i></a></li>
-            <li><a className="social-icon" href="https://codepen.io/Joshua-Alex"><i class="fa-brands fa-codepen"></i></a></li>
+            <li><a className="social-icon" href="https://codepen.io/Joshua-Alex"><i className="fa-brands fa-codepen"></i></a></li>
           </ul>
         </div>
       </div>

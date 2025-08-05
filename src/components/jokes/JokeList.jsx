@@ -72,14 +72,10 @@ function JokeList({ jokes, isLoading, error }) {
       <div className="jokes-list">{renderJokes()}</div>
       <a href="/" className="get-more">
         {" "}
-        <ShinyText
-          text="
+        
 Get More Jokes
-"
-          disabled={false}
-          speed={3}
-          className="custom-class"
-        />
+
+       
       </a>
     </div>
   );

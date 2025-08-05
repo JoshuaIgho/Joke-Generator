@@ -217,11 +217,13 @@
     margin-top: 0; /* Remove auto margin */
     margin-bottom: 2rem; /* Add space at bottom */
   }
+
   
   .sidebar {
     justify-content: flex-start; /* Align items to top */
     padding-bottom: 20px; /* Add padding at bottom */
   }
+  
 }
 
 /* Keep desktop styles unchanged */
@@ -230,4 +232,5 @@
     padding: 30px 20px; /* Original desktop padding */
     margin-top: auto; /* Push to bottom on desktop */
   }
+  
 }

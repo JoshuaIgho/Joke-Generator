@@ -4,6 +4,7 @@ import Navbar from './components/navbar/navbar';
 import MainContent from './components/Main/maincontent';
 import './App.css';
 import JokeList from './components/jokes/JokeList.jsx';
+import About from './components/About/About.jsx';
 
 function HomePage({ setJokes, setIsLoading, setError }) {
   const navigate = useNavigate();
@@ -73,22 +74,24 @@ function App() {
   const [error, setError] = useState(null);
 
   return (
-    <Router>
-
+     <Router>
       <div className="app">
         <Navbar />
+
         {isLoading && (
           <div className="loading-overlay">
             <div className="loading-spinner"></div>
             Loading jokes...
           </div>
         )}
+
         {error && (
           <div className="error-banner">
             {error}
             <button onClick={() => setError(null)}>×</button>
           </div>
         )}
+
         <Routes>
           <Route 
             path="/" 
@@ -110,8 +113,11 @@ function App() {
               />
             } 
           />
+          <Route 
+            path="/about" 
+            element={<About />} 
+          />
         </Routes>
-       
       </div>
     </Router>
   );

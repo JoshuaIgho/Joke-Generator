@@ -194,12 +194,7 @@ function MainContent({ onGetJokes }) {
                                   className="p-2  rounded-3 get-jokes" 
                                 >
                                   {" "}
-                                  <ShinyText
-                                    text="Get Jokes"
-                                    disabled={false}
-                                    speed={3}
-                                    className="custom-class"
-                                  />
+                                Get Joke
                                 </button>
                               </form>
                             </div>
