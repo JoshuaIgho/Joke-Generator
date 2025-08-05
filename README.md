@@ -1,12 +1,64 @@
-# React + Vite
+# Joke API Project 2.0 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Banner](./image/project-banner.png) <!-- Optional banner image -->
 
-Currently, two official plugins are available:
+## 📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Home Page | Home Page | Joek Page | Jokes |
+|-----------|------------|------------|
+| <img src="./image/Screenshot 2025-08-05 at 20.20.28.png" alt="Logo" width="200"> | <img src="./image/Screenshot 2025-08-05 at 20.20.39.png" alt="Logo" width="200"> | <img src="./image/Screenshot 2025-08-05 at 20.22.02.png" alt="Logo" width="200"> | <img src="./image/Screenshot 2025-08-05 at 20.22.06.png" alt="Logo" width="200"> |
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## ✨ What's New in 2.0
+
+Building on the success of Joke API 1.0, this version introduces:
+
+### Modern Navigation Bar 🧭
+- Home, Jokes, and About pages
+- Responsive design (mobile/desktop)
+- Smooth toggle animation
+
+### Enhanced UI 💅
+- Shiny text effects
+- 3D card flips
+
+### Social Integration 🔗
+- GitHub, Instagram, codepen.io links
+- Hover animations
+
+## 🛠️ Technologies Used
+
+- **Frontend:** React, React Router
+- **Styling:** CSS3 (Flexbox, Grid, Animations)
+- **API:** [JokeAPI](https://sv443.net/jokeapi/v2/)
+- **Icons:** Font Awesome
+
+## 🚀 Features
+
+### Navigation System
+- ☰ Hamburger menu for mobile
+- ✕ Close button when expanded
+- 🌟 Shiny text effects on menu items
+- 📱 Fully responsive design
+
+### Joke Generator
+- 🌍 Multi-language support
+- 🎭 Multiple joke categories
+- 🔢 Customizable number of jokes
+- #️⃣ Search by specific joke ID
+
+### Visual Effects
+- 🃏 3D flip card interface
+- 💫 Smooth animations and transitions
+
+## 🖥️ Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/joke-api-2.0.git
+
+   cd joke-api-2.0
+    npm install
+
+    npm run dev
